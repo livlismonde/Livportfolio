@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #838383;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  h1 {
+    background: #818181;
+    color: #111;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 0;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    /* headers blijven plakken bovenaan */
+    position: sticky;
+    top: 0;
+  }
+  
+  a {
+    background: #818181;
+    color: #111;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 0;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    /* headers blijven plakken bovenaan */
+    position: sticky;
+    top: 0;
+    position: fixed;
+    width: calc(25vw - 2.5px);
+    top: 0;
+    
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    background: black;
+    grid-gap: 1px;
+    padding: 2px;
+    padding-top: 0;
+  }
+  div.column {
+    background: #818181;
+  }
+  
+  main img.preview {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+  }
+  
+  main img.preview:last-child {
+    border-bottom: none;
+  }
+  img{
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  /* dit wordt onze parent element waarin we de css grid toepassen */
+  .section{ 
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    background: #818181;
+    padding: 0%;
+    
+  /*  met grid-template-columns dit krijg je 4 kolomen die elks een fractie nemen van te totale width van je elementm dus 100/4  */
+    grid-template-columns: repeat(4, 1fr);
+    
+  /* met grid-template-rows maken we twij rijen   */
+    grid-template-rows: 1fr 100px;
+    
+  /* binnen elke "" bepalen we de namen van onze custom areas. elke " " staat gelijk aan een row in onse grid template   */
+    grid-template-areas: 
+      "image1 image1 image2 image2" 
+      "row1 row2 row3 row4";
+  
+  }
+  .img1{
+    grid-area: image1;
+  }
+  
+  .img2{
+    grid-area: image2;
+    
+  }
+  
+  .text1{
+    grid-area: row1;
+    background: #818181;
+    color: #111;
+    text-decoration: none;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px 10px;
+    margin: 0;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+  }
+  .text2{
+    grid-area: row2;
+  }
+  .text3{
+    grid-area: row3;
+  }
+  .text4{
+    grid-area: row4;
+  }
+
+.img3{
+  grid-area: image1;
+}
+
+.img4{
+  grid-area: image2;
+  
+}
+  .block{
+background: #818181;
+  border: 1px solid black;
+  }
+  
+  
+  /* met deze media query kunnen we de mobiele versie van onze grid bepalen */
+  @media all and (max-width: 768px){
+    
+    /* we nemen enkel de css properties dat wij willen aanpassen van de section*/
+    .section{
+    grid-template-rows:1fr 1fr 100px;
+    grid-template-areas: 
+      "image1 image1 image1 image1" 
+      "image2 image2 image2 image2"
+      "row1 row2 row3 row4"
+      "image1 image1 image1 image1" 
+      "image2 image2 image2 image2"
+      "row1 row2 row3 row4";
+    }
+    
+  }

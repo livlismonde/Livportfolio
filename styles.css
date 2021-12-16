@@ -30,7 +30,7 @@ h1 {
   top: 0;
 }
 
-a {
+a.navlink {
   background: #818181;
   color: #111;
   text-decoration: none;
@@ -43,14 +43,47 @@ a {
   border-top: 1px solid #111;
   border-bottom: 1px solid #111;
   /* headers blijven plakken bovenaan */
-  position: sticky;
-  top: 0;
-  position: fixed;
-  width: calc(25vw - 2.5px);
-  top: 0;
-  
 }
 
+.column a.navlink {
+  display: none;
+}
+
+/* Mobiele navigatie */
+
+.mobile-menu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+  width: 100vw;
+  height: 100vh;
+  background: blue;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 40px;
+}
+
+#mobile-menu-hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 40px;
+}
 
 /* Main columns grid layout */
 
@@ -65,11 +98,14 @@ main {
 
 div.column {
   background: #818181;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main img.preview {
   width: 100%;
-  height: auto;
+  height: 400px;
+  object-fit: contain;
   border-bottom: 1px solid black;
 }
 
@@ -90,20 +126,32 @@ main img.preview:last-child {
 
 /* 4 kolommen */
 @media screen and (min-width: 601px) {
-  body {
-    /* body mag niet scrollen */
-    height: 100vh;
-    overflow: hidden;
-  }
-
   main {
     /* layout met 4 kolommen */
     grid-template-columns: repeat(4, minmax(200px, 1fr));
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+  }
+  .mobile-menu {
+    display: none;
+  }
+
+  #mobile-menu-hamburger {
+    display: none;
+  }
+
+  .column a.navlink {
+    display: block;
+    position: fixed;
+    width: calc(25vw - 2.5px);
+    top: 0;
+    z-index: 10;
   }
   div.column {
     /* elke kolom individueel scrolt */
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
     padding-top: 42px;
   }
 

@@ -6,32 +6,61 @@
     <title>No Signal</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
-
-  <main>
-    <div class="column">
-      <a href="index.html">LIV LISMONDE</a>
-      <img class="preview" src="images/Kent_grijs.jpg" />
-      <img class="preview" src="images/Tonya_grijs.jpg" />
+  <!-- height = aantal beelden * 400 + 40px voor de header -->
+  <body style="height: 1640px">
+    <button id="mobile-menu-hamburger">🍔</button>
+    <div class="mobile-menu">
+      <button id="menu-close">X</button>
+      <a class="navlink" href="index.html">LIV LISMONDE</a>
+      <a class="navlink" href="projects.html">PROJECTS</a>
+      <a class="navlink" href="about.html">ABOUT</a>
+      <a class="navlink" href="contact.html">CONTACT</a>
     </div>
+    <main>
+      <div class="column">
+        <a class="navlink" href="index.html">LIV LISMONDE</a>
+        <div class="inner-column" id="column-1">
+          <img class="preview" src="images/Kent_grijs.jpg" />
+          <img class="preview" src="images/Tonya_grijs.jpg" />
+          <img class="preview" src="images/Kent_grijs.jpg" />
+          <img class="preview" src="images/Tonya_grijs.jpg" />
+        </div>
+      </div>
 
-    <div class="column">
-      <a href="projects.html">PROJECTS</a>
-      <img class="preview"  src="images/E_grijs.jpg" />
-      <img class="preview"  src="images/Edu_grijs.jpg" />
-    </div>
-   
+      <div class="column">
+        <a class="navlink" href="projects.html">PROJECTS</a>
+        <div class="inner-column" id="column-2">
+          <img class="preview" src="images/E_grijs.jpg" />
+          <img class="preview" src="images/Edu_grijs.jpg" />
+          <img class="preview" src="images/E_grijs.jpg" />
+          <img class="preview" src="images/Edu_grijs.jpg" />
+        </div>
+      </div>
 
-    <div class="column">
-      <a href="about.html">ABOUT</a>
-      <img class="preview"  src="images/Green_grey.jpg" />
-      <img class="preview"  src="images/pix_grey.jpg" />
-    </div>
+      <div class="column">
+        <a class="navlink" href="about.html">ABOUT</a>
+        <div class="inner-column" id="column-3">
+          <img class="preview" src="images/Green_grey.jpg" />
+          <img class="preview" src="images/pix_grey.jpg" />
+          <img class="preview" src="images/Green_grey.jpg" />
+          <img class="preview" src="images/pix_grey.jpg" />
+          <img class="preview" src="images/Green_grey.jpg" />
+          <img class="preview" src="images/pix_grey.jpg" />
+          <img class="preview" src="images/Green_grey.jpg" />
+          <img class="preview" src="images/pix_grey.jpg" />
+        </div>
+      </div>
 
-    <div class="column">
-      <a href="contact.html">CONTACT</a>
-      <img class="preview"  src="images/flower_grey.jpg" />
-      <img class="preview"  src="images/Kent_grijs.jpg" />
-    </div>
-
-  </main>
+      <div class="column">
+        <a class="navlink" href="contact.html">CONTACT</a>
+        <div class="inner-column" id="column-4">
+          <img class="preview" src="images/flower_grey.jpg" />
+          <img class="preview" src="images/Kent_grijs.jpg" />
+          <img class="preview" src="images/flower_grey.jpg" />
+          <img class="preview" src="images/Kent_grijs.jpg" />
+        </div>
+      </div>
+    </main>
+    <script src="fake_scrolling.js"></script>
+  </body>
 </html>

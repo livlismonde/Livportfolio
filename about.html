@@ -3,132 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>No Signal</title>
+    <title>LIVLISMONDE</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-  <main>
-    <div class="column">
-      <a href="index.html">LIV LISMONDE</a>
-      <img class="preview" src="images/Kent_grijs.jpg" />
-      <img class="preview" src="images/Tonya_grijs.jpg" />
+
+  <!-- height = aantal beelden * 400 + 40px voor de header -->
+  <body style="height: 840px">
+    <button id="mobile-menu-hamburger">🍔</button>
+    <div class="mobile-menu">
+      <button id="menu-close">X</button>
+      <a class="navlink" href="index.html">LIV LISMONDE</a>
+      <a class="navlink" href="projects.html">PROJECTS</a>
     </div>
-
-    <div class="column">
-      <a href="projects.html">PROJECTS</a>
-      <img class="preview"  src="images/E_grijs.jpg" />
-      <img class="preview"  src="images/Edu_grijs.jpg" />
-    </div>
-   
-
-    <div class="column">
-      <a href="about.html">ABOUT</a>
-      <img class="preview"  src="images/Green_grey.jpg" />
-      <img class="preview"  src="images/pix_grey.jpg" />
-    </div>
-
-    <div class="column">
-      <a href="contact.html">CONTACT</a>
-      <img class="preview"  src="images/flower_grey.jpg" />
-      <img class="preview"  src="images/Kent_grijs.jpg" />
-    </div>
-
-  </main>
-</html>
-<!-- //<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CONTACT</title>
-    <link href="twocolumns.css" rel="stylesheet" type="text/css" />
-  </head>
-
-  <div id="content">
-    <div id="up-left">
-        <div id="box" style="background: red" class="snap white">
-             <h1>ONE</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="snap black">
-             <h1>TWO</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="snap white">
-             <h1>THREE</h1>  <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="snap black">
-             <h1>FOUR</h1>  <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="snap white">
-             <h1>FIVE</h1>  <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="snap black">
-             <h1>SIX</h1>  <a class="more" href="" title=""></a>
-
-        </div>
-    </div>
-    <div id="down-right">
-        <div id="box" class="white">
-             <h1>SIX</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="black">
-             <h1>FIVE</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="white">
-             <h1>FOUR</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="black">
-             <h1>THREE</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" class="white">
-             <h1>TWO</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-        <div id="box" style="background: green" class="black">
-             <h1>ONE</h1>
- <a class="more" href="" title=""></a>
-
-        </div>
-    </div>
-</div>
-<script>
-    var num_children = $('#up-left').children().length;
-    var child_height = $('#up-left').height() / num_children;
-    var half_way = num_children * child_height / 2;
-    $(window).scrollTop(half_way);
-    var ul = '#up-left'; 
-    var dr = '#down-right'; 
-    function crisscross() {
-        $(ul).css('bottom', '-' + window.scrollY + 'px');
-        $(dr).css('bottom', '-' + window.scrollY + 'px');
-        var ulc = $(ul).children();
-        var drc = $(dr).children();
-        var corners = [ulc.first(),ulc.last(),drc.last(),drc.first()];
-        if (window.scrollY > half_way ) {
-            $(window).scrollTop(half_way - child_height);
-             corners[2].appendTo(ul);    
-             corners[0].prependTo(dr);
-        } else if (window.scrollY < half_way - child_height) {
-            $(window).scrollTop(half_way);
-            corners[1].appendTo(dr);
-            corners[3].prependTo(ul);
-        }
+<style>
+    main img.preview {
+      width: 100%;
+      height: 450px;
+      object-fit: contain;
+      border-bottom: 1px solid black;
     }
-    $(window).scroll(crisscross);
-</script>
+</style>
 
-</html> // -->
+    <main>
+      <div class="column">
+        <a class="navlink" href="index.html">LIV LISMONDE</a>
+        <div class="inner-column" id="column-1">
+          <img class="preview" src="images/GREY.jpg" />
+          <img class="preview" src="images/CONTACT.jpg" />
+        </div>
+      </div>
+
+      <div class="column">
+        <a class="navlink" href="projects.html">PROJECTS</a>
+        <div class="inner-column" id="column-2">
+          <img class="preview" src="images/BLUE.jpg" />
+          <img class="preview" src="images/GREY.jpg" />
+        </div>
+      </div>
+
+      <div class="column">
+        <a class="navlink" href="about.html">ABOUT</a>
+        <div class="inner-column" id="column-3">
+          <img class="preview" src="images/INFO.jpg" />
+          <img class="preview" src="images/GREY.jpg" />
+        </div>
+      </div>
+
+      <div class="column">
+        <a class="navlink" href="contact.html">CONTACT</a>
+        <a href="mailto:liv@lismonde.be" class="navlink">CONTACT</a>
+        <div class="inner-column" id="column-4">
+          <img class="preview" src="images/GREY.jpg" />
+          <img class="preview" src="images/SCHOOL.jpg" />
+
+
+
+          
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

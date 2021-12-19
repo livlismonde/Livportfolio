@@ -22,7 +22,7 @@ function onScroll() {
 
   const column4 = document.querySelector("#column-4");
   column4.style.transform = `translate(0, ${
-    -pixelsToScroll * scrollPercentage * 0.2
+    -pixelsToScroll * (1 - scrollPercentage)
   }px)`;
 }
 if (window.innerWidth >= 601) {

@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  background-color: #838383;
+  background-color: #a7a9ac;
 }
 
 img {
@@ -14,7 +14,7 @@ img {
 }
 
 h1 {
-  background: #818181;
+  background: #a7a9ac;
   color: #111;
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
@@ -31,7 +31,7 @@ h1 {
 }
 
 a.navlink {
-  background: #818181;
+  background: #a7a9ac;
   color: #111;
   text-decoration: none;
   font-family: Helvetica, Arial, sans-serif;
@@ -97,14 +97,14 @@ main {
 }
 
 div.column {
-  background: #818181;
+  background: #a7a9ac;
   height: 100vh;
   overflow: hidden;
 }
 
 main img.preview {
   width: 100%;
-  height: 400px;
+  height: 600px;
   object-fit: contain;
   border-bottom: 1px solid black;
 }

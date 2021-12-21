@@ -17,7 +17,7 @@ function onScroll() {
 
   const column3 = document.querySelector("#column-3");
   column3.style.transform = `translate(0, ${
-    -pixelsToScroll * scrollPercentage * 2
+    -pixelsToScroll * scrollPercentage
   }px)`;
 
   const column4 = document.querySelector("#column-4");

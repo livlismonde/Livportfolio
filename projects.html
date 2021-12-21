@@ -5,38 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>No Signal</title>
     <link href="styles.css" rel="stylesheet" type="text/css" />
-    <script src="fake_scrolling.js"></script>
-  </head>
-
-  <main>
-    <div class="column">
+   
+  <!-- height = aantal beelden * 400 + 40px voor de header -->
+  <body style="height: 840px">
+    <button id="mobile-menu-hamburger">🍔</button>
+    <div class="mobile-menu">
+      <button id="menu-close">X</button>
       <a class="navlink" href="index.html">LIV LISMONDE</a>
-      <div class="inner-column" id="column-1"></div>
-    </div>
-
-    <div class="column">
       <a class="navlink" href="projects.html">PROJECTS</a>
     </div>
+<style>
+    main img.preview {
+      width: 100%;
+      height: 635px;
+      object-fit: contain;
+      border-bottom: 1px solid black;
+      grid-gap: 1px;
+  padding: 2px;
+  padding-top: 0;
+    }
+</style>
 
-    <div class="column">
-      <a class="navlink" href="about.html">ABOUT</a>
-    </div>
-
-    <div class="column">
-      <a class="navlink" href="contact.html">CONTACT</a>
-      <a href="mailto:liv@lismonde.be" class="navlink">CONTACT</a>
-    </div>
-
-    <div class="section">
-      <div class="img2">
-        <img src="images/flower_grey.jpg" alt="" />
+    <main>
+      <div class="column">
+        <a class="navlink" href="index.html">LIV LISMONDE</a>
+        <div class="inner-column" id="column-1">
+          <img class="preview" src="images/TSL1.jpg" />
+          <img class="preview" src="images/FLAG1.jpg" />
+        </div>
       </div>
 
-      <div class="img2"></div>
-      <div class="block text1">text</div>
-      <div class="block text2">text</div>
-      <div class="block text3">text</div>
-      <div class="block text4">text</div>
-    </div>
-  </main>
+      <div class="column">
+        <a class="navlink" href="projects.html">PROJECTS</a>
+        <div class="inner-column" id="column-2">
+          <img class="preview" src="images/TSL2.jpg" />
+          <img class="preview" src="images/FLAG2.jpg" />
+        </div>
+      </div>
+
+      <div class="column">
+        <a class="navlink" href="about.html">ABOUT</a>
+        <div class="inner-column" id="column-3">
+          <img class="preview" src="images/TSL3.jpg" />
+          <img class="preview" src="images/FLAG3.jpg" />
+        </div>
+      </div>
+
+      <div class="column">
+        <a class="navlink" href="contact.html">CONTACT</a>
+        <a href="mailto:liv@lismonde.be" class="navlink">CONTACT</a>
+        <div class="inner-column" id="column-4">
+          <img class="preview" src="images/TSL4.jpg" />
+          <img class="preview" src="images/FLAG4.jpg" />
+          
+
+        </div>
+      </div>
+    </main>
+
+</body>
 </html>

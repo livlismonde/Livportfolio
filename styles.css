@@ -52,37 +52,17 @@ a.navlink {
 /* Mobiele navigatie */
 
 .mobile-menu {
-  position: fixed;
-  display: none;
+  position: sticky;
+  display: flex;
   flex-direction: column;
-  padding: 5px;
-  width: 100vw;
-  height: 100vh;
-  background: blue;
   justify-content: center;
   align-items: center;
-}
-
-#menu-close {
-  position: absolute;
+  width: 100%;
   top: 0;
-  right: 0;
-  padding: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 40px;
-}
 
-#mobile-menu-hamburger {
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 40px;
+}
+.mobile-menu a.navlink{
+  width: 100%;
 }
 
 /* Main columns grid layout */
@@ -96,16 +76,25 @@ main {
   padding-top: 0;
 }
 
+@media (max-width: 786px){
+  main{
+      /* margin-top: 15vh; */
+  }
+}
 div.column {
   background: #a7a9ac;
   height: 100vh;
   overflow: hidden;
 }
+div.normal-scroll{
+  overflow: auto;
+  height: auto;
+}
 
 main img.preview {
   width: 100%;
-  height: 600px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   border-bottom: 1px solid black;
 }
 
@@ -133,6 +122,11 @@ main img.preview:last-child {
     overflow: hidden;
     position: fixed;
   }
+  main.normal-scroll{
+    height: auto;
+    overflow: scroll;
+    position: relative;
+  }
   .mobile-menu {
     display: none;
   }
@@ -154,6 +148,10 @@ main img.preview:last-child {
     overflow: hidden;
     padding-top: 42px;
   }
+  div.normal-scroll{
+  overflow: auto;
+  height: auto;
+}
 
   div.column h1 {
     position: fixed;

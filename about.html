@@ -7,62 +7,61 @@
     <link href="styles.css" rel="stylesheet" type="text/css" />
   </head>
 
-
   <!-- height = aantal beelden * 400 + 40px voor de header -->
   <body style="height: 840px">
-    <button id="mobile-menu-hamburger">🍔</button>
     <div class="mobile-menu">
-      <button id="menu-close">X</button>
       <a class="navlink" href="index.html">LIV LISMONDE</a>
       <a class="navlink" href="projects.html">PROJECTS</a>
+      <a class="navlink" href="about.html">ABOUT</a>
+      <a class="navlink" href="mailto:liv@lismonde.be">CONTACT</a>
     </div>
-<style>
-    main img.preview {
-      width: 100%;
-      height: 450px;
-      object-fit: contain;
-      border-bottom: 1px solid black;
-    }
-</style>
+    <style>
+      main img.preview {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-bottom: 1px solid black;
+        grid-gap: 1px;
+    padding: 2px;
+    padding-top: 0;
+  }
+  </style>
 
-    <main>
-      <div class="column">
+<main class="normal-scroll">
+  <div class="column normal-scroll">
         <a class="navlink" href="index.html">LIV LISMONDE</a>
         <div class="inner-column" id="column-1">
-          <img class="preview" src="images/GREY.jpg" />
-          <img class="preview" src="images/CONTACT.jpg" />
+          <img class="preview" src="images/Antwerp_based.jpg" />
+          <img class="preview" src="images/GREYGOEIE.jpg" />
         </div>
       </div>
 
-      <div class="column">
+      <div class="column normal-scroll">
         <a class="navlink" href="projects.html">PROJECTS</a>
         <div class="inner-column" id="column-2">
-          <img class="preview" src="images/BLUE.jpg" />
-          <img class="preview" src="images/GREY.jpg" />
+          <img class="preview" src="images/BLUEGOEIE.jpg" />
+          <img class="preview" src="images/GREYGOEIE.jpg" />
         </div>
       </div>
 
-      <div class="column">
+      <div class="column normal-scroll">
         <a class="navlink" href="about.html">ABOUT</a>
         <div class="inner-column" id="column-3">
-          <img class="preview" src="images/INFO.jpg" />
-          <img class="preview" src="images/GREY.jpg" />
+          <img class="preview" src="images/GREYGOEIE.jpg" />
+          <img class="preview" src="images/insta.jpg" />
         </div>
       </div>
 
-      <div class="column">
+      <div class="column normal-scroll">
         <a class="navlink" href="contact.html">CONTACT</a>
         <a href="mailto:liv@lismonde.be" class="navlink">CONTACT</a>
         <div class="inner-column" id="column-4">
-          <img class="preview" src="images/GREY.jpg" />
-          <img class="preview" src="images/SCHOOL.jpg" />
-
-
-
-          
-
+          <img class="preview" src="images/stlucas.jpg" />
+          <img class="preview" src="images/GREYGOEIE.jpg" />
         </div>
       </div>
     </main>
+    <script src="menu-button.js"></script>
   </body>
 </html>
+
